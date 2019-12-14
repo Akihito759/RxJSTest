@@ -1,0 +1,8 @@
+<div ngbDropdown class="d-inline-block">
+    <button class="btn btn-info" id="OrderFilter" ngbDropdownToggle>Order</button>
+    <div ngbDropdownMenu aria-labelledby="OrderFilter">
+        <button ngbDropdownItem *ngFor="let order of orders" (click)="onOrderChange(order.value)">{{order.title}}<span
+                *ngIf="order.value == selectedOrder" style="color:green"><i class="fa fa-check"
+                    aria-hidden="true"></i></span></button>
+    </div>
+</div>
